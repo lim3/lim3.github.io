@@ -11,8 +11,9 @@ body {
 
 /* line 10, ../../Emil/Dokumente/gitweb/lim3.github.io/style.scss */
 header {
-  background-color: #d0d0d0; }
-  /* line 12, ../../Emil/Dokumente/gitweb/lim3.github.io/style.scss */
+  background-color: #d0d0d0;
+  padding: 4em; }
+  /* line 13, ../../Emil/Dokumente/gitweb/lim3.github.io/style.scss */
   header h1 {
     font-size: 2em; }
 
