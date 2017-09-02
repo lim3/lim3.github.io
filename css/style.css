@@ -330,17 +330,27 @@ body {
   font-size: 16px;
 }
 
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
 header {
   background-color: #d0d0d0;
-  padding: 4em;
+  padding: 4rem 1.2rem;
+  z-index: 100;
+  position: relative;
 }
 
 header h1 {
-  font-size: 2em;
+  font-size: 4em;
+  margin-bottom: 0;
+  line-height: 1;
 }
 
 .container {
-  width: 800px;
+  width: 1000px;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -348,6 +358,7 @@ header h1 {
 
 .top-nav {
   background-color: #343a40;
+  display: block;
 }
 
 .top-nav ul {
@@ -357,12 +368,41 @@ header h1 {
 }
 
 .top-nav ul li {
-  display: inline-block;
+  display: block;
+  position: relative;
+  float: left;
 }
 
 .top-nav ul li a {
-  padding: 1.2em;
+  padding: 1.2rem;
   display: block;
+}
+
+.top-nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.top-nav ul li::before {
+  display: block;
+  content: '';
+  position: absolute;
+  right: -50px;
+  top: 25px;
+  background-color: #343a40;
+  height: 10px;
+  width: 100px;
+  transform: rotate(-85deg);
+  z-index: 99;
+}
+
+main {
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.wrap {
+  padding: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

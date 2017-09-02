@@ -3,16 +3,23 @@
 body{
     font-size:16px;
 }
+.clearfix{
+    @include clearfix;
+}
 header{
     background-color:#d0d0d0;
-    padding: 4em;
+    padding: 4rem 1.2rem;
+    z-index: 100;
+    position: relative;
     h1{
-        font-size:2em;
+        font-size:4em;
+        margin-bottom: 0;
+        line-height: 1;
     }
 }
 
 .container {
-    width:800px;
+    width:1000px;
     max-width:100%;
     margin:0 auto;
     padding:0;
@@ -20,16 +27,42 @@ header{
 
 .top-nav {
     background-color:$gray-800;
+    display: block;
     ul{
         margin:0;
         padding:0;
         font-size:1.2em;
         li{
-            display: inline-block;
+            display: block;
+            position: relative;
+            float: left;
             a{
-                padding:1.2em;
+                padding:1.2rem;
                 display: block;
+                &:hover{
+                    background-color: rgba(0,0,0,.2)
+                }
+            }
+            &::before{
+                display: block;
+                content: '';
+                position: absolute;
+                right: -50px;
+                top:25px;
+                background-color: $gray-800;
+                height: 10px;
+                width:100px;
+                transform: rotate(-85deg);
+                z-index: 99;
             }
         }
     }
+}
+main{
+    background-color:#fff;
+    position: relative;
+    z-index:100;
+}
+.wrap {
+    padding:1.2rem;
 }
